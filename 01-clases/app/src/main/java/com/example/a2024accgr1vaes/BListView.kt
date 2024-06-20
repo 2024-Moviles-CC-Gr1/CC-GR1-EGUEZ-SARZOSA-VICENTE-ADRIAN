@@ -77,7 +77,9 @@ class BListView : AppCompatActivity() {
             }
         )
         builder.setNegativeButton("Cancelar", null)
-        val opciones = arrayListOf<String>()
+        val opciones = resources.getStringArray(
+            R.array.string_array_opciones
+        )
         val seleccionPrevia = booleanArrayOf(
             true, false, false
         )
@@ -121,7 +123,7 @@ class BListView : AppCompatActivity() {
     }
     fun mostrarSnackbar(texto:String){
         val snack = Snackbar.make(
-            findViewById(R.id.cl_ciclo_vida),
+            findViewById(R.id.cl_blist_view),
             texto,
             Snackbar.LENGTH_INDEFINITE
         )
