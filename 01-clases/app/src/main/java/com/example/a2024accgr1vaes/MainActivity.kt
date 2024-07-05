@@ -29,6 +29,9 @@ class MainActivity : AppCompatActivity() {
                     // logica negocio
                     val data = result.data;
                     mostrarSnackbar(
+                        "${result.data}"
+                    )
+                    mostrarSnackbar(
                         "${data?.getStringExtra("nombreMofificado")}"
                     )
                 }
